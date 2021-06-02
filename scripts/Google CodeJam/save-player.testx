@@ -1,0 +1,3 @@
+- save player:
+    rank: "{{rank}}"
+    handle: "{{handle}}"

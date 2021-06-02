@@ -1,0 +1,15 @@
+- set:
+    xpath('//div[@class="ranking-table-page-number-input"]/div/input'): "{{i}}"
+
+- sleep: 3s
+
+- loop over list:
+    loopPath: '//*[@id="scoreboard"]/div[1]/div/div[@class="ranking-table__row"]/div/a/p/img[@src="/static/Tunisia-18.png"]'
+    linkPath: ""
+    scriptFile: 'scripts/CodeJam/save-player.testx'
+    aimToWork: false
+    preWork:
+      - elemPath: "/../../../../div[1]"
+        variable: "rank"
+      - elemPath: "/.."
+        variable: "handle"

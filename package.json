@@ -1,0 +1,25 @@
+{
+  "name": "testx-bots",
+  "version": "0.0.0-dev",
+  "description": "Testx Bots",
+  "author": "Nasreddine Bac Ali <nasreddine.bacali95@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@nan-team/testx-utils": "1.0.2",
+    "@testx/objects-standard": "^1.1.0",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "protractor": "^7.0.0",
+    "testx": "^3.2.1"
+  },
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "run:google-code-jam": "protractor conf.js --specs specs/google-code-jam.spec.js",
+    "run:linkedin-learning": "protractor conf.js --specs specs/linkedin-learning.spec.js",
+    "run:corona-vacine-appointment-nl": "protractor conf.js --specs specs/corona-vacine-appointment-nl.spec.js"
+  },
+  "testx": {
+    "logScript": false,
+    "actionTimeout": 600000
+  }
+}

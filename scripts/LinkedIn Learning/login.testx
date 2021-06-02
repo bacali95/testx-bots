@@ -1,0 +1,9 @@
+- go to: "https://www.linkedin.com/login"
+
+- set:
+    linkedIn.username: "---"
+    linkedIn.password: "---"
+    linkedIn.loginSubmit:
+
+- wait to appear:
+    - linkedIn.logo

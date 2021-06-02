@@ -1,0 +1,20 @@
+- go to: "https://coronatest.nl/ik-wil-me-laten-vaccineren/een-online-afspraak-maken"
+
+- click: corona-test.englishBtn
+
+- click: corona-test.startBtn
+
+- click: corona-test.noChoice
+
+- click: corona-test.nextBtn
+
+- click: corona-test.noChoice
+
+- click: corona-test.nextBtn
+
+- set:
+    corona-test.yearOfBirthInput: "{{process.env.YEAR_OF_BIRTH ?? 1995}}"
+
+- click: corona-test.nextBtn
+
+- report appointment possibility

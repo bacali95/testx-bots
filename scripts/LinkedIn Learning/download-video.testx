@@ -1,0 +1,18 @@
+- sleep: 3s
+
+- put:
+    element: "{{tabName}}"
+
+- wait to appear:
+    - xpath('//video')
+
+- get attribute:
+    xpath: "//video"
+    attribute: "src"
+
+- log:
+    - attribute
+
+- download file:
+    url: "{{attribute}}"
+

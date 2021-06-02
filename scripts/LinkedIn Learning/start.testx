@@ -1,0 +1,27 @@
+#- run: 'scripts/Bot/login.testx'
+
+- go to: 'https://www.linkedin.com/learning/angular-securing-apps/welcome'
+
+- loop over list:
+    loopPath: "//section/h3/button"
+    linkPath: ""
+    click: true
+    script: >
+      - log:
+          - tabName
+    firstIndex: 2
+    max: 4
+    preWork:
+      - elemPath: "/span"
+        variable: "tabName"
+
+- loop over list:
+    loopPath: "//section/ul[@class='classroom-toc-chapter__items']/li"
+    linkPath: ""
+    click: true
+    scriptFile: "scripts/Bot/download-video.testx"
+    preWork:
+      - elemPath: "/a/div/div[1]"
+        variable: "tabName"
+    ifExists:
+      - elemPath: "/a/div/div[1][not(text()='Chapter Quiz')]"
